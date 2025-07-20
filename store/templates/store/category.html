@@ -1,0 +1,9 @@
+{% extends "core/shop.html" %}
+
+{% block cat_content %}
+  {% for category in object_list %}
+  <a href="" class="nav-item nav-link">{{ category.Categoryname }}</a>
+
+    <!-- <a href="{% url 'category_detail' category.id %}" class="nav-item nav-link">{{ category.Categoryname }}</a> -->
+  {% endfor %}
+{% endblock %}

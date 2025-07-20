@@ -1,0 +1,36 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+  <div class="card shadow" style="max-width: 630px; width: 100%;">
+    <div class="card-body">
+      <h3 class="card-title text-center mb-4">Add Author</h3>
+      {% if messages %}
+      <div class="alert alert-info">
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group mb-3">
+          <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+          {{ field }}
+          {% if field.errors %}
+          <div class="text-danger">{{ field.errors }}</div>
+          {% endif %}
+        </div>
+        {% endfor %}
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary btn-block">Add Author</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

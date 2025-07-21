@@ -17,6 +17,10 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 AUTH_USER_MODEL = 'accounts.User'
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://book-store-production-06ca.up.railway.app",
+]
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -25,7 +29,7 @@ AUTH_USER_MODEL = 'accounts.User'
 SECRET_KEY = 'django-insecure-^!(^1615_m%-md9ne^ez61_+ql*8#vi5c%%riit@ox^7rjm2e='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [ "*",   'book-store-production-06ca.up.railway.app',]
 

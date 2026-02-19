@@ -66,16 +66,18 @@ Role-based access control ensures that each user only accesses the features rele
 The project follows Django’s app-based architecture.  
 Each responsibility is separated into its own application to keep the codebase organized and scalable.
 
+```bash
 django-bookstore-app/
 │
-├── accounts/ # User management
-├── bookstore/ # Book models and logic
-├── cart/ # Shopping cart functionality
-├── orders/ # Order management
-├── store/ # Store and employee management
-├── core/ # Shared logic and configurations
-├── media/ # Uploaded images
+├── accounts/        # User management
+├── bookstore/       # Book models and business logic
+├── cart/            # Shopping cart functionality
+├── orders/          # Order management
+├── store/           # Store and employee management
+├── core/            # Shared logic and configurations
+├── media/           # Uploaded images
 └── manage.py
+```
 
 
 This modular structure makes future expansion and maintenance easier.

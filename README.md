@@ -99,12 +99,13 @@ Django ORM was heavily used to define relationships and enforce constraints clea
 
 
 ## ▶️ How to Run
-
+```bash
 git clone https://github.com/setayeshbaghaee/django-bookstore-app
 cd django-bookstore-app
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
+```
 
 
 ##  What I Learned
